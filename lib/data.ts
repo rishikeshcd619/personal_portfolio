@@ -159,7 +159,7 @@ export const PROJECTS: IProject[] = [
         title: 'Harithamithram Web Application',
         slug: 'harithamithram',
         liveUrl: 'https://harithamithram.lsgkerala.gov.in/',
-        year: 2024,
+        year: 2025,
         description: `
       The Harithamithra Web Application is a centralized administrative and monitoring platform designed to manage waste-management operations across local self-government institutions in Kerala. <br/> <br/>
       
@@ -223,10 +223,7 @@ export const PROJECTS: IProject[] = [
         ],
         thumbnail: '/projects/thumbnail/mti-electronics.webp',
         longThumbnail: '/projects/long/mti-electronics.webp',
-        images: [
-            '/projects/images/mti-electronics-1.webp',
-            '/projects/images/mti-electronics-2.webp',
-        ],
+        images: [],
     },
     {
         title: 'Harithamithram Mobile Application',
@@ -238,15 +235,9 @@ export const PROJECTS: IProject[] = [
         ],
         thumbnail: '/projects/thumbnail/epikcart.jpg',
         longThumbnail: '/projects/long/epikcart.jpg',
-        images: [
-            '/projects/images/epikcart-1.png',
-            '/projects/images/epikcart-2.png',
-            '/projects/images/epikcart-3.png',
-            '/projects/images/epikcart-4.png',
-            '/projects/images/epikcart-5.png',
-        ],
-        liveUrl: '',
-        year: 2024,
+        images: [],
+        liveUrl: 'https://play.google.com/store/apps/details?id=in.gov.ikm.harithamithram',
+        year: 2025,
         description: `
       The Harithamithra Mobile Application is a field-level operational app developed for Haritha Karma Sena members, enabling efficient doorstep waste-management services with full offline capability. <br/> <br/>
       
@@ -313,12 +304,14 @@ export const PROJECTS: IProject[] = [
             'Redux',
             'Tailwind CSS',
         ],
-        thumbnail: '/projects/thumbnail/resume-roaster.jpg',
-        longThumbnail: '/projects/long/resume-roaster.jpg',
+        thumbnail: '/projects/sunny-diamonds-1.png',
+        longThumbnail: '/projects/sunny-diamonds-1.png',
         images: [
-            '/projects/images/resume-roaster-1.png',
-            '/projects/images/resume-roaster-2.png',
-            '/projects/images/resume-roaster-3.png',
+            '/projects/sunny-diamonds-1.png',
+            '/projects/sunny-diamonds-2.png',
+            '/projects/sunny-diamonds-3.png',
+            '/projects/sunny-diamonds-4.png',
+            '/projects/sunny-diamonds-5.png',
         ],
         liveUrl: 'https://www.sunnydiamonds.com/',
         year: 2022,
@@ -360,11 +353,7 @@ export const PROJECTS: IProject[] = [
         ],
         thumbnail: '/projects/thumbnail/resume-roaster.jpg',
         longThumbnail: '/projects/long/resume-roaster.jpg',
-        images: [
-            '/projects/images/resume-roaster-1.png',
-            '/projects/images/resume-roaster-2.png',
-            '/projects/images/resume-roaster-3.png',
-        ],
+        images: [],
         liveUrl: '',
         year: 2022,
         description: `
@@ -412,6 +401,25 @@ export const PROJECTS: IProject[] = [
         `,
     },
     {
+        title: 'SD Panel',
+        slug: 'sd-panel',
+        techStack: ['React', 'Laravel', 'Livewire', 'MySQL'],
+        year: 2022,
+        description: `
+            SD Panel is an internal admin dashboard developed for the Sunny Diamonds e-commerce platform. It enables efficient management of products, customers, orders, users, and staff, while acting as an integration layer between the e-commerce website and the Price Engine ERP. The system ensures accurate pricing, synchronized data flow, and streamlined operational workflows.
+        `,
+        role: `
+            Full-Stack Developer <br/>
+            Developed and maintained internal administrative tools and dashboard features. Integrated the panel with Price Engine ERP to ensure real-time data synchronization and consistent pricing across the platform.
+        `,
+        thumbnail: '/projects/sd-panel-1.png',
+        longThumbnail: '/projects/sd-panel-1.png',
+        images: [
+            '/projects/sd-panel-1.png',
+            '/projects/sd-panel-3.png',
+        ],
+    },
+    {
         title: 'Encart – Custom Ecosystem',
         slug: 'encart',
         techStack: [
@@ -422,11 +430,7 @@ export const PROJECTS: IProject[] = [
         ],
         thumbnail: '/projects/thumbnail/property-pro.jpg',
         longThumbnail: '/projects/long/property-pro.jpg',
-        images: [
-            '/projects/images/property-pro-1.png',
-            '/projects/images/property-pro-2.png',
-            '/projects/images/property-pro-3.png',
-        ],
+        images: [],
         liveUrl: '',
         year: 2023,
         description: `
@@ -473,12 +477,14 @@ export const PROJECTS: IProject[] = [
         title: 'Microservices Ecosystem',
         slug: 'microservices-ecosystem',
         techStack: ['Node.js', 'Laravel', 'Microservices', 'Express.js', 'Redis'],
-        thumbnail: '/projects/thumbnail/consulting-finance.jpg',
-        longThumbnail: '/projects/long/consulting-finance.jpg',
+        thumbnail: '/projects/microservices-ecosystem.png',
+        longThumbnail: '/projects/microservices-ecosystem.png',
         images: [
-            '/projects/images/consulting-finance-1.png',
-            '/projects/images/consulting-finance-2.png',
-            '/projects/images/consulting-finance-3.png',
+            '/projects/microservices-ecosystem.png',
+            '/projects/microservices-chatbox-1.png',
+            '/projects/microservices-chatbox-2.png',
+            '/projects/microservices-chatbox-3.png',
+            '/projects/microservices-chatbox-4.png',
         ],
         liveUrl: '',
         year: 2023,
@@ -595,11 +601,7 @@ export const PROJECTS: IProject[] = [
         ],
         thumbnail: '/projects/thumbnail/devLinks.jpg',
         longThumbnail: '/projects/long/devLinks.jpg',
-        images: [
-            '/projects/images/devLinks-1.png',
-            '/projects/images/devLinks-2.png',
-            '/projects/images/devLinks-3.png',
-        ],
+        images: [],
         liveUrl: '',
         year: 2024,
         description: `
@@ -656,14 +658,14 @@ export const PROJECTS: IProject[] = [
             'Tailwind CSS',
             'PWA',
         ],
-        thumbnail: '/projects/thumbnail/property-pro.jpg',
-        longThumbnail: '/projects/long/property-pro.jpg',
+        thumbnail: '/projects/dfe-1.png',
+        longThumbnail: '/projects/dfe-1.png',
         images: [
-            '/projects/images/property-pro-1.png',
-            '/projects/images/property-pro-2.png',
-            '/projects/images/property-pro-3.png',
+            '/projects/dfe-1.png',
+            '/projects/dfe-2.png',
+            '/projects/dfe-3.png',
         ],
-        liveUrl: '',
+        liveUrl: 'https://dfe.sunnydiamonds.com/',
         year: 2024,
         description: `
             Diamond for Everyone is a dedicated digital portal for requesting and managing an instalment-based diamond jewellery purchase plan. It is designed to make diamond ownership more accessible through flexible and transparent payment options. <br/><br/>
@@ -706,12 +708,12 @@ export const PROJECTS: IProject[] = [
             'Livewire',
             'MySQL',
         ],
-        thumbnail: '/projects/thumbnail/consulting-finance.jpg',
-        longThumbnail: '/projects/long/consulting-finance.jpg',
+        thumbnail: '/projects/tally-exchanger-1.png',
+        longThumbnail: '/projects/tally-exchanger-1.png',
         images: [
-            '/projects/images/consulting-finance-1.png',
-            '/projects/images/consulting-finance-2.png',
-            '/projects/images/consulting-finance-3.png',
+            '/projects/tally-exchanger-1.png',
+            '/projects/tally-exchanger-2.png',
+            '/projects/tally-exchanger-3.png',
         ],
         liveUrl: '',
         year: 2024,
@@ -758,11 +760,7 @@ export const PROJECTS: IProject[] = [
         ],
         thumbnail: '/projects/thumbnail/consulting-finance.jpg',
         longThumbnail: '/projects/long/consulting-finance.jpg',
-        images: [
-            '/projects/images/consulting-finance-1.png',
-            '/projects/images/consulting-finance-2.png',
-            '/projects/images/consulting-finance-3.png',
-        ],
+        images: [],
         liveUrl: '',
         year: 2023,
         description: `

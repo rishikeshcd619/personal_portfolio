@@ -128,6 +128,13 @@ const ProjectDetails = ({ project }: Props) => {
                                         <ExternalLink size={30} />
                                     </a>
                                 )}
+                                {!project.sourceCode && !project.liveUrl && (
+                                    <div className="flex flex-col">
+                                        <p className="text-[10px] text-muted-foreground max-w-[200px] leading-tight italic">
+                                            Developed as an internal application for business operations
+                                        </p>
+                                    </div>
+                                )}
                             </div>
                         </div>
 
