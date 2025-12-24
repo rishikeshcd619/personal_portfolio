@@ -45,12 +45,17 @@ const ProjectList = () => {
                     imageContainer.current.getBoundingClientRect();
                 const offsetTop = e.clientY - containerRect.y;
 
-                // if cursor is outside the container, hide the image
+                const currentProject = PROJECTS.find(
+                    (p) => p.slug === selectedProject,
+                );
+
+                // if cursor is outside the container or no thumbnail, hide the image
                 if (
                     containerRect.y > e.clientY ||
                     containerRect.bottom < e.clientY ||
                     containerRect.x > e.clientX ||
-                    containerRect.right < e.clientX
+                    containerRect.right < e.clientX ||
+                    !currentProject?.thumbnail
                 ) {
                     return gsap.to(imageContainer.current, {
                         duration: 0.3,
@@ -109,31 +114,34 @@ const ProjectList = () => {
                 <SectionTitle title="What I've Built" />
 
                 <div className="group/projects relative" ref={containerRef}>
-                    {/* {selectedProject !== null && (
+                    {selectedProject !== null && (
                         <div
-                            className="max-md:hidden absolute right-0 top-0 z-[1] pointer-events-none w-[200px] xl:w-[350px] aspect-[3/4] overflow-hidden opacity-0"
+                            className="max-md:hidden absolute right-0 top-0 z-[1] pointer-events-none h-[200px] aspect-[1851/966] overflow-hidden opacity-0"
                             ref={imageContainer}
                         >
                             {PROJECTS.map((project) => (
-                                <Image
-                                    src={project.thumbnail}
-                                    alt="Project"
-                                    width="400"
-                                    height="500"
-                                    className={cn(
-                                        'absolute inset-0 transition-all duration-500 w-full h-full object-cover',
-                                        {
-                                            'opacity-0':
-                                                project.slug !==
-                                                selectedProject,
-                                        },
+                                <React.Fragment key={project.slug}>
+                                    {project.thumbnail && (
+                                        <Image
+                                            src={project.thumbnail}
+                                            alt="Project"
+                                            width={1851}
+                                            height={966}
+                                            className={cn(
+                                                'absolute inset-0 transition-all duration-500 w-full h-full object-contain',
+                                                {
+                                                    'opacity-0':
+                                                        project.slug !==
+                                                        selectedProject,
+                                                },
+                                            )}
+                                            ref={imageRef}
+                                        />
                                     )}
-                                    ref={imageRef}
-                                    key={project.slug}
-                                />
+                                </React.Fragment>
                             ))}
                         </div>
-                    )} */}
+                    )}
 
                     <div
                         className="flex flex-col max-md:gap-10"
