@@ -65,12 +65,15 @@ const ProjectDetails = ({ project }: Props) => {
     // parallax effect on images
     useGSAP(
         () => {
+            const totalImages = project.images.reduce(
+                (acc, section) => acc + section.images.length,
+                0,
+            );
             const isGrid =
-                project.slug === 'harithamithram-mobile' ||
-                project.images.length > 4;
+                project.slug === 'harithamithram-mobile' || totalImages > 2;
 
             gsap.utils
-                .toArray<HTMLDivElement>('#images > div')
+                .toArray<HTMLDivElement>('.project-image-container')
                 .forEach((imageDiv, i) => {
                     gsap.to(imageDiv, {
                         y: -50,
@@ -185,33 +188,44 @@ const ProjectDetails = ({ project }: Props) => {
                     </div>
                 </div>
 
-                <div
-                    className={`fade-in-later relative mx-auto gap-10 ${
-                        project.slug === 'harithamithram-mobile'
-                            ? 'grid grid-cols-2 md:grid-cols-4'
-                            : project.images.length > 4
-                              ? 'grid grid-cols-1 md:grid-cols-2 max-w-[1000px]'
-                              : 'flex flex-col max-w-[800px]'
-                    }`}
-                    id="images"
-                >
-                    {project.images.map((image) => (
-                        <div
-                            key={image}
-                            className="group relative w-full flex justify-center items-center"
-                        >
-                            <img
-                                src={image}
-                                alt={project.title}
-                                className={`w-full h-auto object-contain bg-background-light shadow-sm rounded-lg max-h-[600px]`}
-                            />
-                            <a
-                                href={image}
-                                target="_blank"
-                                className="absolute top-4 right-4 bg-background/70 text-foreground size-12 inline-flex justify-center items-center transition-all opacity-0 hover:bg-primary hover:text-primary-foreground group-hover:opacity-100"
+                <div className="space-y-20 mt-20">
+                    {project.images.map((section) => (
+                        <div key={section.title} className="space-y-8">
+                            {project.images.length > 1 && section.title && (
+                                <h2 className="text-3xl md:text-5xl font-anton text-center mb-10 fade-in-later uppercase text-primary/20">
+                                    {section.title}
+                                </h2>
+                            )}
+                            <div
+                                className={`fade-in-later relative mx-auto gap-10 ${
+                                    project.slug === 'harithamithram-mobile'
+                                        ? 'grid grid-cols-2 md:grid-cols-4'
+                                        : section.images.length > 2 ||
+                                            project.images.length > 2
+                                          ? 'grid grid-cols-1 md:grid-cols-2 max-w-[1000px]'
+                                          : 'flex flex-col max-w-[800px]'
+                                }`}
                             >
-                                <ExternalLink />
-                            </a>
+                                {section.images.map((image) => (
+                                    <div
+                                        key={image}
+                                        className="project-image-container group relative w-full flex justify-center items-center"
+                                    >
+                                        <img
+                                            src={image}
+                                            alt={project.title}
+                                            className={`w-full h-auto object-contain bg-background-light shadow-sm rounded-lg max-h-[600px]`}
+                                        />
+                                        <a
+                                            href={image}
+                                            target="_blank"
+                                            className="absolute top-4 right-4 bg-background/70 text-foreground size-12 inline-flex justify-center items-center transition-all opacity-0 hover:bg-primary hover:text-primary-foreground group-hover:opacity-100"
+                                        >
+                                            <ExternalLink />
+                                        </a>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     ))}
                 </div>

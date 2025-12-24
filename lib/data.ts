@@ -224,12 +224,17 @@ export const PROJECTS: IProject[] = [
         thumbnail: '/projects/harithamithram-1.png',
         longThumbnail: '/projects/harithamithram-1.png',
         images: [
-            '/projects/harithamithram-1.png',
-            '/projects/harithamithram-2.png',
-            '/projects/harithamithram-3.png',
-            '/projects/harithamithram-4.png',
-            '/projects/harithamithram-5.png',
-            '/projects/harithamithram-6.png',
+            {
+                title: '',
+                images: [
+                    '/projects/harithamithram-1.png',
+                    '/projects/harithamithram-2.png',
+                    '/projects/harithamithram-3.png',
+                    '/projects/harithamithram-4.png',
+                    '/projects/harithamithram-5.png',
+                    '/projects/harithamithram-6.png',
+                ],
+            },
         ],
     },
     {
@@ -243,16 +248,21 @@ export const PROJECTS: IProject[] = [
         thumbnail: '/projects/harithamithram-mobile-1.jpg',
         longThumbnail: '/projects/harithamithram-mobile-1.jpg',
         images: [
-            '/projects/harithamithram-mobile-1.jpg',
-            '/projects/harithamithram-mobile-2.jpg',
-            '/projects/harithamithram-mobile-3.jpg',
-            '/projects/harithamithram-mobile-4.jpg',
-            '/projects/harithamithram-mobile-5.jpg',
-            '/projects/harithamithram-mobile-6.jpg',
-            '/projects/harithamithram-mobile-7.jpg',
-            '/projects/harithamithram-mobile-8.jpg',
-            '/projects/harithamithram-mobile-9.jpg',
-            '/projects/harithamithram-mobile-10.jpg',
+            {
+                title: '',
+                images: [
+                    '/projects/harithamithram-mobile-1.jpg',
+                    '/projects/harithamithram-mobile-2.jpg',
+                    '/projects/harithamithram-mobile-3.jpg',
+                    '/projects/harithamithram-mobile-4.jpg',
+                    '/projects/harithamithram-mobile-5.jpg',
+                    '/projects/harithamithram-mobile-6.jpg',
+                    '/projects/harithamithram-mobile-7.jpg',
+                    '/projects/harithamithram-mobile-8.jpg',
+                    '/projects/harithamithram-mobile-9.jpg',
+                    '/projects/harithamithram-mobile-10.jpg',
+                ],
+            },
         ],
         liveUrl: 'https://play.google.com/store/apps/details?id=in.gov.ikm.harithamithram',
         year: 2025,
@@ -325,11 +335,16 @@ export const PROJECTS: IProject[] = [
         thumbnail: '/projects/sunny-diamonds-1.png',
         longThumbnail: '/projects/sunny-diamonds-1.png',
         images: [
-            '/projects/sunny-diamonds-1.png',
-            '/projects/sunny-diamonds-2.png',
-            '/projects/sunny-diamonds-3.png',
-            '/projects/sunny-diamonds-4.png',
-            '/projects/sunny-diamonds-5.png',
+            {
+                title: '',
+                images: [
+                    '/projects/sunny-diamonds-1.png',
+                    '/projects/sunny-diamonds-2.png',
+                    '/projects/sunny-diamonds-3.png',
+                    '/projects/sunny-diamonds-4.png',
+                    '/projects/sunny-diamonds-5.png',
+                ],
+            },
         ],
         liveUrl: 'https://www.sunnydiamonds.com/',
         year: 2022,
@@ -433,8 +448,13 @@ export const PROJECTS: IProject[] = [
         thumbnail: '/projects/sd-panel-1.png',
         longThumbnail: '/projects/sd-panel-1.png',
         images: [
-            '/projects/sd-panel-1.png',
-            '/projects/sd-panel-3.png',
+            {
+                title: '',
+                images: [
+                    '/projects/sd-panel-1.png',
+                    '/projects/sd-panel-3.png',
+                ],
+            },
         ],
     },
     {
@@ -498,11 +518,19 @@ export const PROJECTS: IProject[] = [
         thumbnail: '/projects/microservices-ecosystem.png',
         longThumbnail: '/projects/microservices-ecosystem.png',
         images: [
-            '/projects/microservices-ecosystem.png',
-            '/projects/microservices-chatbox-1.png',
-            '/projects/microservices-chatbox-2.png',
-            '/projects/microservices-chatbox-3.png',
-            '/projects/microservices-chatbox-4.png',
+            {
+                title: 'Giftcard Service',
+                images: ['/projects/microservices-ecosystem.png'],
+            },
+            {
+                title: 'Chat Box',
+                images: [
+                    '/projects/microservices-chatbox-1.png',
+                    '/projects/microservices-chatbox-2.png',
+                    '/projects/microservices-chatbox-3.png',
+                    '/projects/microservices-chatbox-4.png',
+                ],
+            },
         ],
         liveUrl: '',
         year: 2023,
@@ -515,7 +543,7 @@ export const PROJECTS: IProject[] = [
                 <li>Uses a custom Single Sign-On (SSO) mechanism</li>
                 <li>Allows users to access multiple platforms with a single login</li>
                 <li>Centralizes authentication for consistency and security</li>
-            </ul>
+            </ul><br/>
 
             <strong>Cipher – Authorization Microservice</strong>
             <ul>
@@ -524,7 +552,7 @@ export const PROJECTS: IProject[] = [
                 <li>Provides verified user details to applications and services</li>
                 <li>Ensures users can access only authorized features and data</li>
                 <li>Enables consistent role-based access across all platforms</li>
-            </ul>
+            </ul><br/>
 
             <strong>Payment Centralization Microservice</strong>
             <ul>
@@ -533,7 +561,7 @@ export const PROJECTS: IProject[] = [
                 <li>Supports integration with POS machines and digital payment systems</li>
                 <li>Includes Ezetap integration for POS-based payments</li>
                 <li>Ensures secure, consistent, and auditable payment processing</li>
-            </ul>
+            </ul><br/>
 
             <strong>Asset Management Microservice</strong>
             <ul>
@@ -542,7 +570,7 @@ export const PROJECTS: IProject[] = [
                 <li>Supports asset editing, updating, and replacement</li>
                 <li>Enables reuse of assets across multiple applications and services</li>
                 <li>Ensures visual consistency and easy content maintenance</li>
-            </ul>
+            </ul><br/>
 
             <strong>Echo – Communication Microservice</strong>
             <ul>
@@ -550,7 +578,7 @@ export const PROJECTS: IProject[] = [
                 <li>Supports both high-bandwidth and low-bandwidth delivery modes</li>
                 <li>Manages traffic and delivery queues during peak loads</li>
                 <li>Provides status tracking and delivery monitoring</li>
-            </ul>
+            </ul><br/>
 
             <strong>Pendulum – Data Integration Microservice</strong>
             <ul>
@@ -559,7 +587,7 @@ export const PROJECTS: IProject[] = [
                 <li>Ensures data consistency and synchronization across systems</li>
                 <li>Reduces duplication and manual data handling</li>
                 <li>Supports scalable integration as new projects are added</li>
-            </ul>
+            </ul><br/>
 
             <strong>Flyport – Hardware Integration Microservice</strong>
             <ul>
@@ -568,7 +596,7 @@ export const PROJECTS: IProject[] = [
                 <li>Captures and transfers hardware-generated data into the system</li>
                 <li>Ensures accurate, real-time inventory updates</li>
                 <li>Provides a standardized interface for adding new hardware devices</li>
-            </ul>
+            </ul><br/>
 
             <strong>Inkwhiz – Reporting & Export Microservice</strong>
             <ul>
@@ -576,7 +604,7 @@ export const PROJECTS: IProject[] = [
                 <li>Supports standard and extensible export formats</li>
                 <li>Enables data visualization outputs for analysis and audits</li>
                 <li>Ensures consistent reporting across all applications</li>
-            </ul>
+            </ul><br/>
 
             <strong>E-Reminder – Reminder & Notification Microservice</strong>
             <ul>
@@ -584,7 +612,7 @@ export const PROJECTS: IProject[] = [
                 <li>Supports event-based and time-based reminders</li>
                 <li>Delivers notifications through integrated communication channels</li>
                 <li>Ensures important tasks, deadlines, and follow-ups are not missed</li>
-            </ul>
+            </ul><br/>
 
             <strong>Chatbox – Conversational Interface Microservice</strong>
             <ul>
@@ -679,9 +707,14 @@ export const PROJECTS: IProject[] = [
         thumbnail: '/projects/dfe-1.png',
         longThumbnail: '/projects/dfe-1.png',
         images: [
-            '/projects/dfe-1.png',
-            '/projects/dfe-2.png',
-            '/projects/dfe-3.png',
+            {
+                title: '',
+                images: [
+                    '/projects/dfe-1.png',
+                    '/projects/dfe-2.png',
+                    '/projects/dfe-3.png',
+                ],
+            },
         ],
         liveUrl: 'https://dfe.sunnydiamonds.com/',
         year: 2024,
@@ -729,9 +762,14 @@ export const PROJECTS: IProject[] = [
         thumbnail: '/projects/tally-exchanger-1.png',
         longThumbnail: '/projects/tally-exchanger-1.png',
         images: [
-            '/projects/tally-exchanger-1.png',
-            '/projects/tally-exchanger-2.png',
-            '/projects/tally-exchanger-3.png',
+            {
+                title: '',
+                images: [
+                    '/projects/tally-exchanger-1.png',
+                    '/projects/tally-exchanger-2.png',
+                    '/projects/tally-exchanger-3.png',
+                ],
+            },
         ],
         liveUrl: '',
         year: 2024,
@@ -780,7 +818,7 @@ export const PROJECTS: IProject[] = [
         longThumbnail: '',
         images: [],
         liveUrl: '',
-        year: 2023,
+        year: 2024,
         description: `
             Disburse is a centralized fund request and reimbursement management application designed to handle financial requests from multiple departments within an organization. It provides complete visibility and control over fund flow and reimbursements, under the supervision of the Finance Manager. <br/><br/>
 
