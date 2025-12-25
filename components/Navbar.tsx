@@ -1,7 +1,7 @@
 'use client';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
-import { MoveUpRight, Github, Linkedin } from 'lucide-react';
+import { MoveUpRight, Github, Linkedin, Home, User, Briefcase, FolderRoot, Phone, Mail } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { EMAIL_LINK, GENERAL_INFO, SOCIAL_LINKS } from '@/lib/data';
 
@@ -16,29 +16,26 @@ const Whatsapp = ({ className }: { className?: string }) => (
     </svg>
 );
 
-const COLORS = [
-    'bg-yellow-500 text-black',
-    'bg-blue-500 text-white',
-    'bg-teal-500 text-black',
-    'bg-indigo-500 text-white',
-];
-
 const MENU_LINKS = [
     {
         name: 'Home',
         url: '/',
+        icon: <Home size={18} />,
     },
     {
         name: 'About Me',
         url: '/#about-me',
+        icon: <User size={18} />,
     },
     {
         name: 'Experience',
         url: '/#my-experience',
+        icon: <Briefcase size={18} />,
     },
     {
         name: 'Projects',
         url: '/#selected-projects',
+        icon: <FolderRoot size={18} />,
     },
 ];
 
@@ -151,17 +148,7 @@ const Navbar = () => {
                                             }}
                                             className="group text-xl flex items-center gap-3"
                                         >
-                                            <span
-                                                className={cn(
-                                                    'size-3.5 bg-white/20 rounded-full flex items-center justify-center group-hover:scale-[200%] transition-all',
-                                                    COLORS[idx],
-                                                )}
-                                            >
-                                                <MoveUpRight
-                                                    size={8}
-                                                    className="scale-0 group-hover:scale-100 transition-all"
-                                                />
-                                            </span>
+                                            {link.icon}
                                             {link.name}
                                         </button>
                                     </li>
@@ -173,9 +160,16 @@ const Navbar = () => {
 
                 <div className="w-full max-w-[300px] mx-8 sm:mx-auto">
                     <p className="text-muted-foreground mb-4">GET IN TOUCH</p>
-                    <a href={EMAIL_LINK}>
-                        {GENERAL_INFO.email}
-                    </a>
+                    <div className="flex flex-col gap-2">
+                        <a href={EMAIL_LINK} className="flex items-center gap-2 hover:text-primary transition-colors">
+                            <Mail size={14} className="text-muted-foreground" />
+                            {GENERAL_INFO.email}
+                        </a>
+                        <a href={`tel:${GENERAL_INFO.phone.replace(/\s/g, '')}`} className="flex items-center gap-2 hover:text-primary transition-colors">
+                            <Phone size={14} className="text-muted-foreground" />
+                            {GENERAL_INFO.phone}
+                        </a>
+                    </div>
                 </div>
             </div>
         </>

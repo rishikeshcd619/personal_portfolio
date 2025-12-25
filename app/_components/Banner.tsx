@@ -2,6 +2,7 @@
 import ArrowAnimation from '@/components/ArrowAnimation';
 import Button from '@/components/Button';
 import { EMAIL_LINK, GENERAL_INFO } from '@/lib/data';
+import HireMeModal from '@/components/HireMeModal';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
@@ -11,14 +12,10 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const Banner = () => {
     const containerRef = React.useRef<HTMLDivElement>(null);
+    const [isModalOpen, setIsModalOpen] = React.useState(false);
 
     const handleHireMeClick = () => {
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        if (isMobile) {
-            window.open('tel:7736638889', '_self');
-        } else {
-            window.open(EMAIL_LINK, '_self');
-        }
+        setIsModalOpen(true);
     };
 
     // move the content a little up on scroll
@@ -98,6 +95,10 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
+            <HireMeModal 
+                isOpen={isModalOpen} 
+                onClose={() => setIsModalOpen(false)} 
+            />
         </section>
     );
 };
